@@ -16,13 +16,15 @@ Gem::Specification.new do |s|
     "README.rdoc"
   ]
   s.files = [
-    "Gemfile",
+    ".gitignore",
+     "Gemfile",
      "README.rdoc",
      "Rakefile",
      "lib/grooveshark.rb",
      "lib/grooveshark/tiny_song.rb",
      "spec/grooveshark/tiny_song_spec.rb",
      "spec/spec_helper.rb",
+     "tinysong.gemspec",
      "watchr_suite.rb"
   ]
   s.homepage = %q{http://github.com/Oshuma/tiny_song}
@@ -40,9 +42,12 @@ Gem::Specification.new do |s|
     s.specification_version = 3
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
+      s.add_runtime_dependency(%q<json>, [">= 1.4.0"])
     else
+      s.add_dependency(%q<json>, [">= 1.4.0"])
     end
   else
+    s.add_dependency(%q<json>, [">= 1.4.0"])
   end
 end
 

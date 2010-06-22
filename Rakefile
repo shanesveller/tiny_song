@@ -24,6 +24,7 @@ begin
     gemspec.homepage = "http://github.com/Oshuma/tiny_song"
     gemspec.authors = ["Dale Campbell"]
     gemspec.version = Grooveshark::TinySong::VERSION
+    gemspec.add_dependency 'json', '>=1.4.0'
   end
 rescue LoadError
   puts "Jeweler not available. Install it with: gem install jeweler"
