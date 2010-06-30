@@ -1,4 +1,3 @@
-require 'lib/grooveshark/tiny_song.rb'
 require 'spec/rake/spectask'
 
 task :default => :spec
@@ -23,7 +22,7 @@ begin
     gemspec.email = "oshuma@gmail.com"
     gemspec.homepage = "http://github.com/Oshuma/tiny_song"
     gemspec.authors = ["Dale Campbell"]
-    gemspec.version = Grooveshark::TinySong::VERSION
+    gemspec.version = '0.1.0'
     gemspec.add_dependency 'json', '>=1.4.0'
   end
 rescue LoadError
